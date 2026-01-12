@@ -4,20 +4,9 @@ A modern, responsive portfolio website built with **Angular 18** and **PrimeNG**
 
 **Live Demo:** [rahulsalunkhe.me](https://rahulsalunkhe.me)
 
-## Project Screenshots
+## Project Screenshot
 
-### Hero Section
-![Hero Image](public/assets/images/hero-image.jpg)
-
-### About Section
-![About Me](public/assets/images/about-me.jpg)
-
-### Featured Projects
-- **Catalyst CMS** - Content Management System
-  ![Catalyst CMS](public/assets/images/catalyst-cms.png)
-
-- **Goodwill Website** - E-commerce Platform
-  ![Goodwill Website](public/assets/images/goodwill-website.png)
+![Portfolio Website](public/assets/images/portfolio-website.png)
 
 ## Technology Stack
 
