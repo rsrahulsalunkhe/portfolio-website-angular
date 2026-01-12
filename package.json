@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href=/portfolio-website-angular/",
-    "deploy": "ng build --configuration production --base-href=/portfolio-website-angular/ && npx angular-cli-ghpages --dir=dist/app/browser",
+    "build:prod": "ng build --configuration production --base-href=/",
+    "deploy": "ng build --configuration production --base-href=/ && npx angular-cli-ghpages --dir=dist/app/browser --cname=rahulsalunkhe.me",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
