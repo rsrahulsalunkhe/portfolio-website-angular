@@ -1,0 +1,81 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a routerLink="/" (click)="closeMenu()">
+          <span class="logo-text">Rahul<span class="highlight">.</span>Salunkhe</span>
+        </a>
+      </div>
+
+      <button 
+        class="menu-toggle" 
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen()"
+        aria-label="Toggle navigation menu">
+        <span class="hamburger-icon" [class.active]="isMenuOpen()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav class="nav" [class.active]="isMenuOpen()">
+        <ul class="nav-list">
+          <li>
+            <a href="#home" (click)="closeMenu()">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" (click)="closeMenu()">
+              About Me
+            </a>
+          </li>
+          <li>
+            <a href="#skills" (click)="closeMenu()">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#experience" (click)="closeMenu()">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#projects" (click)="closeMenu()">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" (click)="closeMenu()">
+              Contact
+            </a>
+          </li>
+          <li>
+            <button 
+              class="theme-toggle" 
+              (click)="toggleTheme()"
+              aria-label="Toggle theme">
+              <span class="theme-label">Switch Theme</span>
+              <svg *ngIf="!isDarkMode()" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <svg *ngIf="isDarkMode()" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M17 10.5C16.1 14.1 12.9 17 9 17C5.1 17 2 13.9 2 10C2 6.1 4.9 2.9 8.5 2C7.6 2.6 7 3.7 7 5C7 7.2 8.8 9 11 9C12.3 9 13.4 8.4 14 7.5C16.1 8.4 17 9.4 17 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a href="assets/cv.pdf" download class="cv-download-link">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M4.66667 6.66667L8 10M8 10L11.3333 6.66667M8 10V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Download CV
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,13 @@
+services:
+  angular-app:
+    build: .
+    container_name: portfolio_angular
+    ports:
+      # Map container port 4200 to your laptop port 4201
+      # This leaves 4200 free for your old Angular 16 project
+      - "4201:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Ensures file changes trigger updates
