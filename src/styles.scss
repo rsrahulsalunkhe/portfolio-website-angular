@@ -4,7 +4,6 @@
 // Color Variables
 :root {
   // Accent Colors
-  --accent-orange: #f59e0b;
   
   // Gray Scale (Light Mode)
   --gray-50: #f9fafb;
@@ -18,19 +17,6 @@
   --gray-800: #1f2937;
   --gray-900: #111827;
   --gray-950: #030712;
-  
-  // Neutral Colors
-  --dark-bg: #030712;
-  --light-bg: #ffffff;
-  --gray-bg: #f9fafb;
-  --gray-light: #e5e7eb;
-  --gray-medium: #9ca3af;
-  --gray-dark: #4b5563;
-  
-  // Text Colors
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-light: #ffffff;
   
   // Spacing
   --section-padding: 80px;
@@ -51,18 +37,6 @@ body.dark-mode {
   --gray-800: #f3f4f6;
   --gray-900: #f9fafb;
   --gray-950: #ffffff;
-  
-  // Neutral Colors
-  --light-bg: #030712;
-  --dark-bg: #111827;
-  --gray-bg: #111827;
-  --gray-light: #374151;
-  --gray-medium: #6b7280;
-  --gray-dark: #d1d5db;
-  
-  --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
-  --text-light: #ffffff;
 }
 
 * {
@@ -74,8 +48,8 @@ body.dark-mode {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--light-bg);
+  color: var(--gray-900);
+  background-color: var(--gray-50);
   min-height: 100vh;
   font-size: 16px;
   overflow-x: hidden;
@@ -87,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--gray-900);
 }
 
 h1 {
@@ -107,7 +81,7 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  color: var(--text-secondary);
+  color: var(--gray-500);
   line-height: 1.8;
 }
 
@@ -141,38 +115,21 @@ img {
   font-family: 'Poppins', sans-serif;
 
   &.btn-primary {
-    background-color: var(--gray-700);
-    color: var(--text-light);
-    border-color: var(--gray-700);
-
-    &:hover {
-      background-color: var(--gray-800);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
+    background-color: var(--gray-900);
+    color: var(--gray-50);
+    border-color: var(--gray-900);
   }
 
   &.btn-outline {
     background-color: transparent;
     color: var(--gray-700);
     border-color: var(--gray-700);
-
-    &:hover {
-      background-color: var(--gray-700);
-      color: var(--text-light);
-      transform: translateY(-2px);
-    }
   }
 
   &.btn-white {
-    background-color: var(--light-bg);
-    color: var(--text-primary);
-    border-color: var(--light-bg);
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    border-color: var(--gray-50);
   }
 }
 
@@ -202,7 +159,7 @@ img {
   
   p {
     font-size: 1.125rem;
-    color: var(--text-secondary);
+    color: var(--gray-500);
   }
 }
 

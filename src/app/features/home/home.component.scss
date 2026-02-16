@@ -4,7 +4,7 @@
 
   // Section surface background (full width); container only wraps content
   .section-surface {
-    background-color: var(--gray-bg);
+    background-color: var(--gray-50);
   }
 
   // Section header wrapper for centering
@@ -29,7 +29,7 @@
 
   // Section description text
   .section-description {
-    color: var(--text-secondary);
+    color: var(--gray-500);
     font-size: 1.125rem;
     line-height: 1.6;
     max-width: 700px;
@@ -38,7 +38,7 @@
 
   // Hero Section
   .hero {
-    background: linear-gradient(135deg, var(--gray-bg) 0%, var(--light-bg) 100%);
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
     padding: 100px 0 80px;
     
     .hero-content {
@@ -52,7 +52,7 @@
       .greeting {
         font-size: 1.25rem;
         font-weight: 600;
-        color: var(--text-primary);
+        color: var(--gray-900);
         margin-bottom: 1rem;
         font-family: 'Poppins', sans-serif;
       }
@@ -72,6 +72,13 @@
           display: inline-block;
           transform-origin: 70% 70%;
           animation: wave-hand 1.6s ease-in-out infinite;
+          
+          .wave-icon {
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: -0.125em;
+          }
         }
       }
 
@@ -89,14 +96,14 @@
       .hero-description {
         font-size: 1.125rem;
         line-height: 1.8;
-        color: var(--text-secondary);
+        color: var(--gray-500);
         margin-bottom: 2rem;
         max-width: 500px;
       }
 
       .hero-location {
         font-weight: 600;
-        color: var(--text-primary);
+        color: var(--gray-900);
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
@@ -120,8 +127,8 @@
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background: var(--gray-bg);
-          color: var(--text-primary);
+          background: var(--gray-50);
+          color: var(--gray-900);
           transition: all 0.3s ease;
           text-decoration: none;
 
@@ -133,7 +140,7 @@
 
           &:hover {
             background: var(--gray-700);
-            color: var(--light-bg);
+            color: var(--gray-950);
             transform: translateY(-3px);
 
             svg {
@@ -163,7 +170,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          background: linear-gradient(135deg, var(--gray-400), var(--accent-orange));
+          background: linear-gradient(135deg, var(--gray-400), var(--gray-500));
         }
         
         .image-decoration {
@@ -172,7 +179,7 @@
           right: -20px;
           width: 200px;
           height: 200px;
-          background: var(--accent-orange);
+          background: var(--gray-500);
           border-radius: 50%;
           opacity: 0.1;
           z-index: -1;
@@ -183,6 +190,8 @@
   
   // Skills Section
   .skills {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+
     .skills-icons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -215,7 +224,7 @@
       
       p {
         margin: 0;
-        color: var(--text-primary);
+        color: var(--gray-900);
         font-weight: 600;
         font-size: 0.95rem;
       }
@@ -250,7 +259,7 @@
         object-fit: cover;
         border-radius: 12px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(135deg, var(--gray-400), var(--accent-orange));
+        background: linear-gradient(135deg, var(--gray-400), var(--gray-500));
       }
     }
     
@@ -346,7 +355,7 @@
         }
 
         .company {
-          color: var(--accent-orange);
+          color: var(--gray-500);
           font-weight: 600;
           font-size: 1rem;
           margin-bottom: 1rem;
@@ -363,6 +372,8 @@
   
   // Projects Section
   .projects {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    
     .projects-list {
       display: flex;
       flex-direction: column;
@@ -427,8 +438,8 @@
           
           .tech-label {
             display: inline-block;
-            background: var(--gray-bg);
-            color: var(--text-primary);
+            background: var(--gray-50);
+            color: var(--gray-900);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.875rem;
@@ -501,7 +512,7 @@
         label {
           display: block;
           font-weight: 500;
-          color: var(--text-primary);
+          color: var(--gray-900);
           margin-bottom: 0.5rem;
           font-size: 0.9rem;
         }
@@ -510,22 +521,34 @@
         textarea {
           width: 100%;
           padding: 12px 16px;
-          border: 2px solid var(--gray-light);
+          border: 2px solid var(--gray-200);
           border-radius: 8px;
           font-family: 'Inter', sans-serif;
           font-size: 1rem;
           transition: all 0.3s ease;
-          background-color: var(--light-bg);
-          color: var(--text-primary);
+          background-color: var(--gray-50);
+          color: var(--gray-900);
           
           &:focus {
             outline: none;
             border-color: var(--gray-700);
           }
+          
+          &.input-invalid {
+            border-color: #ef4444;
+          }
         }
         
         textarea {
           resize: vertical;
+        }
+        
+        .error-message {
+          display: block;
+          color: #ef4444;
+          font-size: 0.85rem;
+          margin-top: 0.5rem;
+          font-weight: 500;
         }
       }
       
